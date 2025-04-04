@@ -6,12 +6,16 @@
 </head>
 <body class="bg-light">
   <div class="container mt-5">
+    {% extends "base.html" %}
+    {% block title %}Dashboard{% endblock %}
+    {% block content %}
     <h2>Welcome, {{ username }} 👋</h2>
     <div class="mt-4">
       <a href="{{ url_for('add_note') }}" class="btn btn-success">Add Note</a>
       <a href="{{ url_for('all_notes') }}" class="btn btn-secondary">View All Notes</a>
       <a href="{{ url_for('logout') }}" class="btn btn-danger float-end">Logout</a>
     </div>
+    {% endblock %}
   </div>
 </body>
 </html>
